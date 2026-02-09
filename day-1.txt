@@ -1,1 +1,122 @@
-linux -cmd
+    1  exit
+    2  ls
+    3  mkdir docker
+    4  ls
+    5  git --version
+    6  sudo apt remove docker docker-engine docker.io containerd runc -y
+    7  sudo apt install ca-certificates curl gnupg lsb-release -y
+    8  sudo mkdir -p /etc/apt/keyrings
+    9  sudo ls /etc
+   10  sudo ls /etc/apt
+   11  sudo ls /etc/apt/keyrings/
+   12  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+   13  sudo chmod a+r /etc/apt/keyrings/docker.gpg
+   14  echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] \
+   15  https://download.docker.com/linux/ubuntu \
+   16  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   17  sudo apt update
+   18  sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+   19  sudo systemctl status docker
+   20  sudo docker run hello-world
+   21  sudo usermod -aG docker $USER
+   22  newgrp docker
+   23  docker ps
+   24  git clone https://github.com/jagafaster/jenkins-101.git
+   25  cd jenkins-101/
+   26  ls
+   27  docker build -t myjenkins-blueocean:2.332.3-1 .
+   28  sudo usermod -aG docker $USER
+   29  docker build -t myjenkins-blueocean:2.332.3-1 .
+   30  sudo docker build -t myjenkins-blueocean:lts .
+   31  more /etc/os-release 
+   32  ifconfig
+   33  sudo apt install net-tools
+   34  ip addr
+   35  ifconfig
+   36  sudo apt update && sudo apt upgrade -y
+   37  ls
+   38  pwd
+   39  ip a
+   40  ifconfig
+   41  sudo apt install openssh-server -y
+   42  sudo systemctl status ssh
+   43  sudo systemctl enable ssh
+   44  sudo systemctl start ssh
+   45  sudo systemctl status ssh
+   46  sudo ufw allow ssh
+   47  sudo ufw reload
+   48  sudo ufw status
+   49  ifconfig
+   50  exit
+   51  ifconfig
+   52  clear
+   53  ifconfig
+   54  exit
+   55  sudo systemctl ssh
+   56  sudo systemctl status ssh
+   57  clear
+   58  ifconfig
+   59  history | grep exec
+   60  docker -p
+   61  docker -ps
+   62  ls
+   63  docker --version
+   64  docker ps -a
+   65  docker exec 9a3571422900
+   66  docker ps
+   67  docker exec --help
+   68  docker exec -i 9a3571422900
+   69  ls
+   70  cd jenkins-101/
+   71  docker exec -i 9a3571422900
+   72  docker exec -it 9a3571422900
+   73  docker ps
+   74  docker exec -it myjenkins-blueocean bash
+   75  ls
+   76  docker ps
+   77  clear
+   78  docker ps
+   79  docker exec -it 9a3571422900 bash
+   80  sudo systemctl status ssh
+   81  ifconfig
+   82  ls
+   83  sudo apt upgrade -y
+   84  exit
+   85  ls
+   86  mkdir newdir
+   87  cp sample.txt newdir/
+   88  ls
+   89  ls newdir/
+   90  vim newdir/sample.txt 
+   91  cat newdir/sample.txt 
+   92  cat sample.txt 
+   93  cp sample.txt newdir/sample2.txt
+   94  ls newdir/
+   95  cp sample.txt newdir/
+   96  cat newdir/sample.txt 
+   97  mv newdir/sample2.txt ./
+   98  ls
+   99  ls newdir/
+  100  cd newdir/
+  101  touch new1 *5
+  102  ls
+  103  touch new2.txt 
+  104  touch new3.txt 
+  105  touch new4.txt 
+  106  touch new5.txt 
+  107  touch ws.sh
+  108  touch camel.tf
+  109  ls
+  110  ls *.txt
+  111  ls new*
+  112  rm *.txt
+  113  ls
+  114  ls *.??
+  115  ls *.?h
+  116  history
+  117  ls
+  118  git clone https://github.com/jagadeeshkanna97/kongu-2.git
+  119  ls
+  120  cd kongu-2/
+  121  ls
+  122  history > day-1.txt 
